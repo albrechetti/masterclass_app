@@ -1,4 +1,4 @@
-// GENERATED CODE DO NOT MODIFY BY HAND
+// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'home_store.dart';
 
@@ -26,6 +26,8 @@ mixin _$HomeStore on HomeStoreBase, Store {
 
   @override
   String toString() {
-    return 'counter: ${counter}';
+    return '''
+counter: ${counter}
+    ''';
   }
 }
