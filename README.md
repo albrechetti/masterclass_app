@@ -1,16 +1,27 @@
-# masterclass_app
+# Flutterando Masterclass (Em construção)
 
-A new Flutter project.
+Mini app que contém todas as atividades e estudos desenvolvidos durante a Masterclass da comunidade Flutterando a maior comunidade de Flutter do Brasil.
 
-## Getting Started
+Estarei atualizando esse repositório conforme a masterclass for avançando.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Atividades e conteúdos
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Playground - Espaço destinado a estudos aleatórios. 
+- Animações - Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos extras.
+- Leitura de Mockup - Aplicação da técnica de leitura de mockup, contendo 2 exercícios.
+- Miscelânia...
+- Design Patterns...
+- Design Patterns 2...
+- Testes de unidade...
+- Gerenciamento de estado...
+- Arquitetura...
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Design e Mockup
+
+A fim de contribuir com a comunidade e com o curso, desenvolvi um layout com intuíto de organizar todas as atividades da masterclass em um mini app.
+
+[Protótipo desenvolvido no Adobe XD ](https://xd.adobe.com/view/6089d2f7-7ebb-4bd7-95ab-0e6c15322907-35da/)
+
+![Home](/assets/home.png)  ![Lista de Atividades](/assets/infos.png)
+
