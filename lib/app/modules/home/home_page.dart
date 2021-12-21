@@ -21,7 +21,6 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121517),
       appBar: const CustomAppBar(
         hasLogo: true,
         title: 'Olá, Luan',

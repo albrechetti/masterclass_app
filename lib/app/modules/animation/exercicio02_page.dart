@@ -14,7 +14,6 @@ class _Exercicio02PageState extends State<Exercicio02Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121517),
       appBar: CustomAppBar(hasLogo: false, title: widget.title),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -52,9 +51,9 @@ class _Exercicio02PageState extends State<Exercicio02Page> {
                           AnimatedRotation(
                             duration: const Duration(milliseconds: 500),
                             turns: isExpand ? 0.5 : 0,
-                            child: const Icon(
+                            child: Icon(
                               Icons.expand_more,
-                              color: Colors.white54,
+                              color: Theme.of(context).highlightColor,
                             ),
                           ),
                         ],

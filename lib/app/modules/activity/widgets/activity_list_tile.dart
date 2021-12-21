@@ -11,10 +11,10 @@ class ActivityListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(44),
-        color: const Color(0xff172026),
+        borderRadius: BorderRadius.circular(40),
+        color: Theme.of(context).backgroundColor,
       ),
       child: GestureDetector(
         onTap: () {
@@ -28,10 +28,10 @@ class ActivityListTile extends StatelessWidget {
           ),
           leading: Container(
             alignment: Alignment.center,
-            width: 44,
-            height: 44,
+            width: 32,
+            height: 32,
             decoration: BoxDecoration(
-              color: const Color(0xff055AA3),
+              color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.circular(24),
             ),
             child: Text(

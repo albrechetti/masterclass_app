@@ -8,13 +8,13 @@ class InfoCard extends StatelessWidget {
   final int exercises;
   final String description;
 
-  const InfoCard(
-      {Key? key,
-      required this.icon,
-      required this.title,
-      required this.exercises,
-      required this.description})
-      : super(key: key);
+  const InfoCard({
+    Key? key,
+    required this.icon,
+    required this.title,
+    required this.exercises,
+    required this.description,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class InfoCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(24.0),
         ),
         elevation: 0,
-        color: const Color(0xff172026),
+        color: Theme.of(context).backgroundColor,
         child: SizedBox(
           height: 220,
           child: Padding(
@@ -42,12 +42,12 @@ class InfoCard extends StatelessWidget {
                           width: 44,
                           height: 44,
                           decoration: BoxDecoration(
-                            color: const Color(0xff055AA3),
+                            color: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(24),
                           ),
                           child: Icon(
                             icon,
-                            color: const Color(0xff121517),
+                            color: Theme.of(context).shadowColor,
                             size: 28,
                           ),
                         ),
@@ -80,9 +80,9 @@ class InfoCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          const Icon(
+                          Icon(
                             FontAwesomeIcons.github,
-                            color: Color(0xFFEDF4F8),
+                            color: Theme.of(context).highlightColor,
                           ),
                           const SizedBox(width: 8),
                           Text('Acessar código fonte',
@@ -90,7 +90,7 @@ class InfoCard extends StatelessWidget {
                         ],
                       ),
                       MaterialButton(
-                          color: const Color(0xff055AA3),
+                          color: Theme.of(context).primaryColor,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24.0),
                           ),

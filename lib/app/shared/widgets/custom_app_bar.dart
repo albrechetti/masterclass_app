@@ -28,8 +28,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   onPressed: () {
                     Modular.to.pop();
                   },
-                  icon: const Icon(Icons.chevron_left,
-                      size: 40, color: Color(0xFFEDF4F8)),
+                  icon: Icon(Icons.chevron_left,
+                      size: 40, color: Theme.of(context).highlightColor),
                 ),
           const SizedBox(width: 8),
           Column(
