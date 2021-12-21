@@ -14,7 +14,6 @@ class Exercicio01PageState extends State<Exercicio01Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff121517),
       appBar: CustomAppBar(hasLogo: false, title: widget.title),
       body: AnimatedAlign(
         duration: const Duration(milliseconds: 500),
@@ -32,7 +31,7 @@ class Exercicio01PageState extends State<Exercicio01Page> {
               width: isTaped ? 100 : 50,
               height: 50,
               decoration: BoxDecoration(
-                color: const Color(0xff055AA3),
+                color: Theme.of(context).primaryColor,
                 borderRadius: isTaped
                     ? BorderRadius.circular(0)
                     : BorderRadius.circular(50),

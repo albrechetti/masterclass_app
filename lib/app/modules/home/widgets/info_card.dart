@@ -95,7 +95,7 @@ class InfoCard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(24.0),
                           ),
                           onPressed: () {
-                            Modular.to.pushNamed('/activity',
+                            Modular.to.pushNamed('/activity/',
                                 arguments: {'title': title});
                           },
                           child: Text('Ver mais',

@@ -9,18 +9,18 @@ part of 'activity_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$ActivityStore on _ActivityStoreBase, Store {
-  final _$valueAtom = Atom(name: '_ActivityStoreBase.value');
+  final _$titleAtom = Atom(name: '_ActivityStoreBase.title');
 
   @override
-  int get value {
-    _$valueAtom.reportRead();
-    return super.value;
+  String? get title {
+    _$titleAtom.reportRead();
+    return super.title;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
+  set title(String? value) {
+    _$titleAtom.reportWrite(value, super.title, () {
+      super.title = value;
     });
   }
 
@@ -28,11 +28,11 @@ mixin _$ActivityStore on _ActivityStoreBase, Store {
       ActionController(name: '_ActivityStoreBase');
 
   @override
-  void increment() {
+  Widget checkActivity(dynamic context) {
     final _$actionInfo = _$_ActivityStoreBaseActionController.startAction(
-        name: '_ActivityStoreBase.increment');
+        name: '_ActivityStoreBase.checkActivity');
     try {
-      return super.increment();
+      return super.checkActivity(context);
     } finally {
       _$_ActivityStoreBaseActionController.endAction(_$actionInfo);
     }
@@ -41,7 +41,7 @@ mixin _$ActivityStore on _ActivityStoreBase, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+title: ${title}
     ''';
   }
 }

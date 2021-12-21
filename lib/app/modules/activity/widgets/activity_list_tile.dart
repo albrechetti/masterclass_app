@@ -18,7 +18,7 @@ class ActivityListTile extends StatelessWidget {
       ),
       child: GestureDetector(
         onTap: () {
-          Modular.to.pushNamed('/animation/${route + (index + 1).toString()}');
+          Modular.to.pushNamed(route + (index + 1).toString());
         },
         child: ListTile(
           title: Text(

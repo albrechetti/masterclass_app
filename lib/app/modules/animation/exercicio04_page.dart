@@ -15,6 +15,22 @@ class _Exercicio04PageState extends State<Exercicio04Page> {
   double _height = 50;
   Color _color = Colors.black;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(0);
+
+  void shapeGenerate() {
+    final random = Random();
+    setState(() {
+      _width = random.nextInt(400).toDouble();
+      _height = random.nextInt(400).toDouble();
+      _color = Color.fromRGBO(
+        random.nextInt(256),
+        random.nextInt(256),
+        random.nextInt(256),
+        1,
+      );
+      _borderRadius = BorderRadius.circular(random.nextInt(1000).toDouble());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,21 +41,7 @@ class _Exercicio04PageState extends State<Exercicio04Page> {
         ),
         tooltip: 'Click aqui para gerar uma forma aleatória',
         backgroundColor: Theme.of(context).primaryColor,
-        onPressed: () {
-          final random = Random();
-          setState(() {
-            _width = random.nextInt(400).toDouble();
-            _height = random.nextInt(400).toDouble();
-            _color = Color.fromRGBO(
-              random.nextInt(256),
-              random.nextInt(256),
-              random.nextInt(256),
-              1,
-            );
-            _borderRadius =
-                BorderRadius.circular(random.nextInt(1000).toDouble());
-          });
-        },
+        onPressed: shapeGenerate,
         child: const Icon(Icons.refresh),
       ),
       body: Center(
