@@ -13,7 +13,7 @@ class _Exercicio03PageState extends State<Exercicio03Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(hasLogo: false, title: 'Exercício 3'),
+      appBar: const CustomAppBar(hasLogo: false, title: 'Exercício 3', showThemeToggle: false,),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

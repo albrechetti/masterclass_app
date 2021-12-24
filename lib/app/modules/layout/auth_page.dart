@@ -22,8 +22,8 @@ class AuthPage extends StatelessWidget {
           SizedBox(
             height: 20,
             child: Text(
-              'Welcome to Flutter Chat',
-              style: Theme.of(context).textTheme.bodyText1,
+              'Welcome to Flutter',
+              style: Theme.of(context).textTheme.headline2,
             ),
           ),
           const AuthForm(),

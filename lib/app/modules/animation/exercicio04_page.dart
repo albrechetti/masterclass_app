@@ -34,7 +34,7 @@ class _Exercicio04PageState extends State<Exercicio04Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(hasLogo: false, title: 'Exercício 4'),
+      appBar: const CustomAppBar(hasLogo: false, title: 'Exercício 4', showThemeToggle: false,),
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(18),

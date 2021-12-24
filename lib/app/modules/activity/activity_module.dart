@@ -1,5 +1,4 @@
 import 'package:flutter_modular/flutter_modular.dart';
-
 import 'activity_page.dart';
 import 'activity_store.dart';
 

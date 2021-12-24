@@ -1,48 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:masterclass_app/app/modules/themes/dartk_theme.dart';
+import 'package:masterclass_app/app/modules/themes/light_theme.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
-class AppWidget extends StatelessWidget {
+import 'app_widget_controller.dart';
+
+class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
 
   @override
+  State<AppWidget> createState() => _AppWidgetState();
+}
+
+class _AppWidgetState extends ModularState<AppWidget, AppWidgetController> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutterando Masterclass',
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xff121517),
-        primaryColor: const Color(0xff055AA3),
-        backgroundColor: const Color(0xff172026),
-        shadowColor: const Color(0xff121517),
-        highlightColor: const Color(0xFFEDF4F8),
-        textTheme: TextTheme(
-          headline1: TextStyle(
-            fontSize: 20,
-            fontFamily: GoogleFonts.poppins().fontFamily,
-            fontWeight: FontWeight.w600,
-            color: const Color(0xFFEDF4F8),
-          ),
-          headline2: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w400,
-            fontFamily: GoogleFonts.poppins().fontFamily,
-            color: const Color(0xFFEDF4F8),
-          ),
-          bodyText1: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            fontFamily: GoogleFonts.montserrat().fontFamily,
-            color: const Color(0xFFEDF4F8),
-          ),
-          bodyText2: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            fontFamily: GoogleFonts.montserrat().fontFamily,
-            color: const Color(0xFf51565A),
-          ),
-        ),
-      ),
-    ).modular();
+    return Observer(
+        builder: (context) => MaterialApp(
+              debugShowCheckedModeBanner: false,
+              title: 'Flutterando Masterclass',
+              theme: lightTheme,
+              themeMode:
+                  controller.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+              darkTheme: darkTheme,
+            ).modular());
   }
 }

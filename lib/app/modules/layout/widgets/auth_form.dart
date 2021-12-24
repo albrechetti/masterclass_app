@@ -45,11 +45,14 @@ class AuthForm extends StatelessWidget {
             OutlinedButton(
               child:
                   Text('Submit', style: Theme.of(context).textTheme.bodyText1),
-              style: ButtonStyle(
-                  padding: MaterialStateProperty.all<EdgeInsets>(
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 20)),
-                  backgroundColor: MaterialStateProperty.all(
-                      Theme.of(context).primaryColor)),
+              style: OutlinedButton.styleFrom(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
+                backgroundColor: Theme.of(context).primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
               onPressed: () {},
             ),
           ],

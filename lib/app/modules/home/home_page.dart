@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:masterclass_app/app/shared/widgets/custom_app_bar.dart';
 import 'package:masterclass_app/app/shared/widgets/custom_bottom_app_bar.dart';
 
-import 'home_store.dart';
 import 'widgets/info_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,14 +16,12 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeStore> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
-        hasLogo: true,
-        title: 'Olá, Luan',
-      ),
+          hasLogo: true, title: 'Atividades', showThemeToggle: true),
       body: ListView(
         children: const [
           InfoCard(

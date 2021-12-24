@@ -23,5 +23,4 @@ A fim de contribuir com a comunidade e com o curso, desenvolvi um layout com int
 
 [Protótipo desenvolvido no Adobe XD ](https://xd.adobe.com/view/6089d2f7-7ebb-4bd7-95ab-0e6c15322907-35da/)
 
-![Home](/assets/home.png)  ![Lista de Atividades](/assets/infos.png)
 

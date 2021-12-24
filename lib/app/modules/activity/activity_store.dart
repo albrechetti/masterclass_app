@@ -11,7 +11,6 @@ class ActivityStore = _ActivityStoreBase with _$ActivityStore;
 abstract class _ActivityStoreBase with Store {
   @observable
   String? title;
-
   @action
   Widget checkActivity(context) {
     if (title == 'Animações') {
@@ -38,7 +37,7 @@ abstract class _ActivityStoreBase with Store {
         },
       );
     }
-    if (title == 'Playground') {
+    if (title == 'Playground_') {
       return ListView.builder(
         itemCount: 2,
         itemBuilder: (context, index) {
