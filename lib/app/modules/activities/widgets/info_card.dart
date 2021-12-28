@@ -98,8 +98,10 @@ class InfoCard extends StatelessWidget {
                             Modular.to.pushNamed('/activity/',
                                 arguments: {'title': title});
                           },
-                          child: Text('Ver mais',
-                              style: Theme.of(context).textTheme.bodyText1)),
+                          child: Text(
+                            'Ver mais',
+                            style: Theme.of(context).textTheme.button,
+                          )),
                     ],
                   ),
                 ),

@@ -14,7 +14,11 @@ class Exercicio01PageState extends State<Exercicio01Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(hasLogo: false, title: widget.title, showThemeToggle: false,),
+      appBar: CustomAppBar(
+        hasLogo: false,
+        title: widget.title,
+        showThemeToggle: true,
+      ),
       body: AnimatedAlign(
         duration: const Duration(milliseconds: 500),
         alignment: isTaped ? Alignment.topCenter : Alignment.bottomRight,

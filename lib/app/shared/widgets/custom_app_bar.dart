@@ -20,8 +20,8 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(80);
 }
 
-class _CustomAppBarState
-    extends ModularState<CustomAppBar, AppWidgetController> {
+class _CustomAppBarState extends State<CustomAppBar> {
+  final controller = Modular.get<AppWidgetController>();
   @override
   Widget build(BuildContext context) {
     return Padding(

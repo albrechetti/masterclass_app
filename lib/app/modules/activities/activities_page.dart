@@ -8,15 +8,15 @@ import 'package:masterclass_app/app/shared/widgets/custom_bottom_app_bar.dart';
 
 import 'widgets/info_card.dart';
 
-class HomePage extends StatefulWidget {
+class ActivitiesPage extends StatefulWidget {
   final String title;
-  const HomePage({Key? key, this.title = "Home"}) : super(key: key);
+  const ActivitiesPage({Key? key, this.title = "Home"}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _ActivitiesPageState createState() => _ActivitiesPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ActivitiesPageState extends State<ActivitiesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

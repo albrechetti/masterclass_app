@@ -14,7 +14,11 @@ class _Exercicio02PageState extends State<Exercicio02Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(hasLogo: false, title: widget.title, showThemeToggle: false,),
+      appBar: CustomAppBar(
+        hasLogo: false,
+        title: widget.title,
+        showThemeToggle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: ListView.builder(

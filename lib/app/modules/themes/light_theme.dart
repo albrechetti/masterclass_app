@@ -9,6 +9,12 @@ final lightTheme = ThemeData(
   shadowColor: const Color(0xFFEDF4F8),
   highlightColor: const Color(0xff121517),
   textTheme: TextTheme(
+    button: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w400,
+      fontFamily: GoogleFonts.montserrat().fontFamily,
+      color: const Color(0xFFEDF4F8),
+    ),
     headline1: TextStyle(
       fontSize: 20,
       fontFamily: GoogleFonts.poppins().fontFamily,
