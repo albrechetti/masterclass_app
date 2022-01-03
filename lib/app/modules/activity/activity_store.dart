@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass_app/app/modules/activity/widgets/empty_activity.dart';
+import 'package:masterclass_app/app/shared/widgets/empty_activity.dart';
 import 'package:mobx/mobx.dart';
 
 import 'widgets/activity_list_tile.dart';
@@ -37,14 +37,14 @@ abstract class _ActivityStoreBase with Store {
         },
       );
     }
-    if (title == 'Playground_') {
+    if (title == 'Playground') {
       return ListView.builder(
-        itemCount: 2,
+        itemCount: 1,
         itemBuilder: (context, index) {
           return ActivityListTile(
             index: index,
-            title: 'Exercicio ${index + 1}',
-            route: 'exercicio',
+            title: 'Estudo ${index + 1}',
+            route: '/playground/exercicio',
           );
         },
       );

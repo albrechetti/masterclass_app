@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:masterclass_app/app/modules/themes/dartk_theme.dart';
-import 'package:masterclass_app/app/modules/themes/light_theme.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:masterclass_app/app/shared/themes/dartk_theme.dart';
+import 'package:masterclass_app/app/shared/themes/light_theme.dart';
 
 import 'app_widget_controller.dart';
 

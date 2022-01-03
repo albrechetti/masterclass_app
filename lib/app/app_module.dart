@@ -4,7 +4,8 @@ import 'package:masterclass_app/app/modules/about/about_module.dart';
 import 'package:masterclass_app/app/modules/activity/activity_module.dart';
 import 'package:masterclass_app/app/modules/animation/animation_module.dart';
 import 'package:masterclass_app/app/modules/layout/layout_module.dart';
-import 'modules/activities/activities_module.dart';
+import 'package:masterclass_app/app/modules/main/main_module.dart';
+import 'package:masterclass_app/app/modules/playground/playground_module.dart';
 
 class AppModule extends Module {
   @override
@@ -14,11 +15,11 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ModuleRoute(Modular.initialRoute, module: ActivitiesModule()),
+    ModuleRoute(Modular.initialRoute, module: MainModule()),
     ModuleRoute('/activity', module: ActivityModule()),
     ModuleRoute('/animation', module: AnimationModule()),
     ModuleRoute('/layout', module: LayoutModule()),
+    ModuleRoute('/playground', module: PlaygroundModule()),
     ModuleRoute('/about', module: AboutModule()),
-   
   ];
 }

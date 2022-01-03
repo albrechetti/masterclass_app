@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomBottomAppBar extends StatelessWidget {
+class CustomBottomAppBar extends StatefulWidget {
   const CustomBottomAppBar({
     Key? key,
   }) : super(key: key);
 
-  changePages(int index) {
-    switch (index) {
-      case 0:
-        return Pages.activities;
-      case 1:
-        return Pages.repository;
-      default:
-        return Pages.about;
-    }
-  }
+  @override
+  State<CustomBottomAppBar> createState() => _CustomBottomAppBarState();
+}
 
+class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
@@ -27,7 +21,6 @@ class CustomBottomAppBar extends StatelessWidget {
         height: 80,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: 68,
@@ -47,13 +40,13 @@ class CustomBottomAppBar extends StatelessWidget {
                         ),
                       ),
                       IconButton(
-                        splashRadius: 20,
-                        splashColor: Theme.of(context).primaryColor,
-                        icon: const Icon(FontAwesomeIcons.bullseye),
-                        color: Theme.of(context).highlightColor,
-                        iconSize: 24,
-                        onPressed: () {},
-                      ),
+                          splashRadius: 20,
+                          splashColor: Theme.of(context).primaryColor,
+                          icon: const Icon(FontAwesomeIcons.bullseye),
+                          color: Theme.of(context).highlightColor,
+                          iconSize: 24,
+                          onPressed: () {} //() => bottomTapped(0),
+                          ),
                     ],
                   ),
                   Text('Atividades',
@@ -74,13 +67,13 @@ class CustomBottomAppBar extends StatelessWidget {
               child: Column(
                 children: [
                   IconButton(
-                    splashRadius: 22,
-                    splashColor: Theme.of(context).primaryColor,
-                    icon: const Icon(FontAwesomeIcons.github),
-                    color: Theme.of(context).highlightColor,
-                    iconSize: 24,
-                    onPressed: () {},
-                  ),
+                      splashRadius: 22,
+                      splashColor: Theme.of(context).primaryColor,
+                      icon: const Icon(FontAwesomeIcons.github),
+                      color: Theme.of(context).highlightColor,
+                      iconSize: 24,
+                      onPressed: () {} //() => bottomTapped(0),
+                      ),
                   Text('Repositório',
                       style: Theme.of(context).textTheme.bodyText1)
                 ],
@@ -99,15 +92,13 @@ class CustomBottomAppBar extends StatelessWidget {
               child: Column(
                 children: [
                   IconButton(
-                    splashRadius: 22,
-                    splashColor: Theme.of(context).primaryColor,
-                    icon: const Icon(FontAwesomeIcons.userAlt),
-                    color: Theme.of(context).highlightColor,
-                    iconSize: 24,
-                    onPressed: () {
-                      Modular.to.pushNamed('/about');
-                    },
-                  ),
+                      splashRadius: 22,
+                      splashColor: Theme.of(context).primaryColor,
+                      icon: const Icon(FontAwesomeIcons.userAlt),
+                      color: Theme.of(context).highlightColor,
+                      iconSize: 24,
+                      onPressed: () {} //() => bottomTapped(1),
+                      ),
                   Text('Sobre o dev',
                       style: Theme.of(context).textTheme.bodyText1)
                 ],
