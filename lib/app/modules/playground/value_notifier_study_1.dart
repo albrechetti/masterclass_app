@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass_app/app/shared/widgets/custom_app_bar.dart';
 
-class ValueNotifierStudy extends StatefulWidget {
-  const ValueNotifierStudy({Key? key}) : super(key: key);
+class ValueNotifierStudy1 extends StatefulWidget {
+  const ValueNotifierStudy1({Key? key}) : super(key: key);
 
   @override
-  _ValueNotifierStudyState createState() => _ValueNotifierStudyState();
+  _ValueNotifierStudy1State createState() => _ValueNotifierStudy1State();
 }
 
-class _ValueNotifierStudyState extends State<ValueNotifierStudy> {
+class _ValueNotifierStudy1State extends State<ValueNotifierStudy1> {
   final _counter = ValueNotifier<int>(0);
 
   void incrementCounter() {
@@ -19,7 +19,9 @@ class _ValueNotifierStudyState extends State<ValueNotifierStudy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
-          hasLogo: false, title: 'Value Notifier', showThemeToggle: true),
+        hasLogo: false,
+        title: 'Value Notifier',
+      ),
       body: Center(
           child: ValueListenableBuilder(
         builder: (context, value, child) {

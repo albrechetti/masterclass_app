@@ -20,8 +20,7 @@ class ActivityPageState extends ModularState<ActivityPage, ActivityStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-          hasLogo: false, title: widget.title, showThemeToggle: true),
+      appBar: CustomAppBar(hasLogo: false, title: widget.title),
       body: store.checkActivity(context),
     );
   }

@@ -16,7 +16,6 @@ class _Exercicio03PageState extends State<Exercicio03Page> {
       appBar: const CustomAppBar(
         hasLogo: false,
         title: 'Exercício 3',
-        showThemeToggle: true,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

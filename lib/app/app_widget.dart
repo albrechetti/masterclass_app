@@ -4,7 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:masterclass_app/app/shared/themes/dartk_theme.dart';
 import 'package:masterclass_app/app/shared/themes/light_theme.dart';
 
-import 'app_widget_controller.dart';
+import 'utils/theme_controller.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class AppWidget extends StatefulWidget {
   State<AppWidget> createState() => _AppWidgetState();
 }
 
-class _AppWidgetState extends ModularState<AppWidget, AppWidgetController> {
+class _AppWidgetState extends ModularState<AppWidget, ThemeController> {
   @override
   Widget build(BuildContext context) {
     return Observer(

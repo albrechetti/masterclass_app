@@ -1,118 +1,56 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:masterclass_app/app/shared/widgets/custom_vertical_divider.dart';
+import 'package:masterclass_app/app/utils/navigation_controller.dart';
+import 'custom_bottom_app_bar_item.dart';
 
-class CustomBottomAppBar extends StatefulWidget {
-  const CustomBottomAppBar({
-    Key? key,
-  }) : super(key: key);
+class CustomBottomBar extends StatefulWidget {
+  const CustomBottomBar({Key? key}) : super(key: key);
 
   @override
-  State<CustomBottomAppBar> createState() => _CustomBottomAppBarState();
+  _CustomBottomBarState createState() => _CustomBottomBarState();
 }
 
-class _CustomBottomAppBarState extends State<CustomBottomAppBar> {
+class _CustomBottomBarState extends State<CustomBottomBar> {
+  final navigationController = Modular.get<NavigationController>();
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-      elevation: 0,
-      color: Theme.of(context).scaffoldBackgroundColor,
-      child: SizedBox(
-        height: 80,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            SizedBox(
-              height: 68,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Container(
-                        height: 32,
-                        width: 64,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).backgroundColor,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                      ),
-                      IconButton(
-                          splashRadius: 20,
-                          splashColor: Theme.of(context).primaryColor,
-                          icon: const Icon(FontAwesomeIcons.bullseye),
-                          color: Theme.of(context).highlightColor,
-                          iconSize: 24,
-                          onPressed: () {} //() => bottomTapped(0),
-                          ),
-                    ],
-                  ),
-                  Text('Atividades',
-                      style: Theme.of(context).textTheme.bodyText1)
-                ],
+    return ValueListenableBuilder(
+      valueListenable: navigationController,
+      builder: (context, value, child) => BottomAppBar(
+        elevation: 0,
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: SizedBox(
+          height: 80,
+          width: MediaQuery.of(context).size.width * 1,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CustomBottomBarItem(
+                title: 'Atividades',
+                icon: const Icon(FontAwesomeIcons.bullseye),
+                indexPage: 0,
+                isSelected: navigationController.atActivity,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              child: VerticalDivider(
-                width: 1,
-                thickness: 1,
-                color: Theme.of(context).highlightColor,
+              const CustomVerticalDivider(),
+              CustomBottomBarItem(
+                title: 'Repositório',
+                icon: const Icon(FontAwesomeIcons.github),
+                indexPage: 1,
+                isSelected: navigationController.atRepository,
               ),
-            ),
-            SizedBox(
-              height: 68,
-              child: Column(
-                children: [
-                  IconButton(
-                      splashRadius: 22,
-                      splashColor: Theme.of(context).primaryColor,
-                      icon: const Icon(FontAwesomeIcons.github),
-                      color: Theme.of(context).highlightColor,
-                      iconSize: 24,
-                      onPressed: () {} //() => bottomTapped(0),
-                      ),
-                  Text('Repositório',
-                      style: Theme.of(context).textTheme.bodyText1)
-                ],
+              const CustomVerticalDivider(),
+              CustomBottomBarItem(
+                title: 'Sobre o dev',
+                icon: const Icon(FontAwesomeIcons.userAlt),
+                isSelected: navigationController.atAbout,
+                indexPage: 2,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20.0),
-              child: VerticalDivider(
-                width: 1,
-                thickness: 1,
-                color: Theme.of(context).highlightColor,
-              ),
-            ),
-            SizedBox(
-              height: 68,
-              child: Column(
-                children: [
-                  IconButton(
-                      splashRadius: 22,
-                      splashColor: Theme.of(context).primaryColor,
-                      icon: const Icon(FontAwesomeIcons.userAlt),
-                      color: Theme.of(context).highlightColor,
-                      iconSize: 24,
-                      onPressed: () {} //() => bottomTapped(1),
-                      ),
-                  Text('Sobre o dev',
-                      style: Theme.of(context).textTheme.bodyText1)
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
-}
-
-enum Pages {
-  activities,
-  about,
-  repository,
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:masterclass_app/app/utils/hide_bottom_bar.dart';
 
 import 'widgets/info_card.dart';
 
@@ -19,9 +21,11 @@ class ActivitiesPage extends StatefulWidget {
 }
 
 class _ActivitiesPageState extends State<ActivitiesPage> {
+  final hideBottomBar = Modular.get<HideBottomBar>();
   @override
   Widget build(BuildContext context) {
     return ListView(
+      controller: hideBottomBar.scrollController,
       children: const [
         InfoCard(
           title: 'Animações',

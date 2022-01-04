@@ -6,5 +6,4 @@ class RepositoryModule extends Module {
 
   @override
   final List<ModularRoute> routes = [];
-
 }

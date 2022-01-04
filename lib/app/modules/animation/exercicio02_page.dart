@@ -17,7 +17,7 @@ class _Exercicio02PageState extends State<Exercicio02Page> {
       appBar: CustomAppBar(
         hasLogo: false,
         title: widget.title,
-        showThemeToggle: true,
+        
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),

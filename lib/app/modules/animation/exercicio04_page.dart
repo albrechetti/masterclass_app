@@ -37,7 +37,6 @@ class _Exercicio04PageState extends State<Exercicio04Page> {
       appBar: const CustomAppBar(
         hasLogo: false,
         title: 'Exercício 4',
-        showThemeToggle: true,
       ),
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
