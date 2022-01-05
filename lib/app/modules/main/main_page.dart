@@ -5,7 +5,7 @@ import 'package:masterclass_app/app/modules/activities/activities_page.dart';
 import 'package:masterclass_app/app/shared/widgets/custom_navigation.dart';
 import 'package:masterclass_app/app/modules/repository/repository_page.dart';
 import 'package:masterclass_app/app/shared/widgets/custom_app_bar.dart';
-import 'package:masterclass_app/app/utils/navigation_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/navigation_controller.dart';
 
 class MainPage extends StatefulWidget {
   final String title;

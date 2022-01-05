@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:masterclass_app/app/utils/theme_controller.dart';
-import 'package:masterclass_app/app/utils/app_bar_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/theme_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/app_bar_controller.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   const CustomAppBar({

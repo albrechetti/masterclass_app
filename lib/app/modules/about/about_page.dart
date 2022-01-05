@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:masterclass_app/app/modules/about/widgets/favorite_tecnologies.dart';
 import 'package:masterclass_app/app/modules/about/widgets/profile_card.dart';
 import 'package:masterclass_app/app/modules/about/widgets/skills_card.dart';
-import 'package:masterclass_app/app/utils/hide_bottom_bar.dart';
+import 'package:masterclass_app/app/utils/controllers/hide_bottom_bar_controller.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({

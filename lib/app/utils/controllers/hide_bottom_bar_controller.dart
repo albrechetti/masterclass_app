@@ -23,7 +23,6 @@ class HideBottomBar {
       }
     });
   }
-
   void dispose() {
     scrollController.dispose();
     visible.dispose();

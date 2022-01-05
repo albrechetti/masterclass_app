@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:masterclass_app/app/shared/widgets/custom_vertical_divider.dart';
-import 'package:masterclass_app/app/utils/navigation_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/navigation_controller.dart';
 import 'custom_bottom_bar_item.dart';
 
 class CustomBottomBar extends StatefulWidget {

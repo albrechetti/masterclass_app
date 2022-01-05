@@ -1,13 +1,13 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:masterclass_app/app/utils/theme_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/theme_controller.dart';
 import 'package:masterclass_app/app/modules/activity/activity_module.dart';
 import 'package:masterclass_app/app/modules/animation/animation_module.dart';
 import 'package:masterclass_app/app/modules/layout/layout_module.dart';
 import 'package:masterclass_app/app/modules/main/main_module.dart';
 import 'package:masterclass_app/app/modules/playground/playground_module.dart';
-import 'package:masterclass_app/app/utils/app_bar_controller.dart';
-import 'package:masterclass_app/app/utils/hide_bottom_bar.dart';
-import 'package:masterclass_app/app/utils/navigation_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/app_bar_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/hide_bottom_bar_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/navigation_controller.dart';
 
 class AppModule extends Module {
   @override

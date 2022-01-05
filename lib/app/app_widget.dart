@@ -4,7 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:masterclass_app/app/shared/themes/dartk_theme.dart';
 import 'package:masterclass_app/app/shared/themes/light_theme.dart';
 
-import 'utils/theme_controller.dart';
+import 'utils/controllers/theme_controller.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({Key? key}) : super(key: key);

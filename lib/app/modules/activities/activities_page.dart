@@ -4,7 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:masterclass_app/app/utils/hide_bottom_bar.dart';
+import 'package:masterclass_app/app/utils/controllers/hide_bottom_bar_controller.dart';
 
 import 'widgets/info_card.dart';
 

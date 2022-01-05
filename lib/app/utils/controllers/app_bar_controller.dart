@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:masterclass_app/app/utils/navigation_controller.dart';
+import 'package:masterclass_app/app/utils/controllers/navigation_controller.dart';
 
 class AppBarController {
   final navigationController = Modular.get<NavigationController>();

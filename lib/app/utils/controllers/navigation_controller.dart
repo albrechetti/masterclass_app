@@ -4,7 +4,7 @@ import 'package:masterclass_app/app/utils/enum_pages.dart';
 class NavigationController extends ValueNotifier<MyPages> {
   NavigationController() : super(MyPages.atividades);
   PageController pageController = PageController();
-
+  
   int get pageIndex => pageController.page!.toInt();
   bool get atActivity => value == MyPages.atividades;
   bool get atRepository => value == MyPages.repositorio;

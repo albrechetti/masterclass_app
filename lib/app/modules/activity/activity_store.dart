@@ -39,7 +39,7 @@ abstract class _ActivityStoreBase with Store {
     }
     if (title == 'Playground') {
       return ListView.builder(
-        itemCount: 1,
+        itemCount: 2,
         itemBuilder: (context, index) {
           return ActivityListTile(
             index: index,
