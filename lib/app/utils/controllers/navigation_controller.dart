@@ -10,9 +10,14 @@ class NavigationController extends ValueNotifier<MyPages> {
   bool get atRepository => value == MyPages.repositorio;
   bool get atAbout => value == MyPages.sobre;
 
-  void setPageIndex(int index) {
+  void setPageIndexOnTap(int index) {
     value = MyPages.values[index];
 
+    pageController.jumpToPage(index);
+  }
+
+  void setPageIndexOnPageChanged(int index) {
+    value = MyPages.values[index];
     pageController.animateToPage(
       index,
       duration: const Duration(milliseconds: 300),

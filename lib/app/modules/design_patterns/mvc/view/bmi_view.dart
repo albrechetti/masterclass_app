@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:masterclass_app/app/modules/playground/design_pattern/controller_pattern/controller/bmi_page_controller.dart';
+
+import 'package:masterclass_app/app/modules/design_patterns/mvc/controller/bmi_page_controller.dart';
+
 import 'package:masterclass_app/app/shared/widgets/custom_app_bar.dart';
 
-class BmiPage extends StatefulWidget {
-  const BmiPage({Key? key}) : super(key: key);
+class BmiView extends StatefulWidget {
+  const BmiView({Key? key}) : super(key: key);
 
   @override
-  _BmiPageState createState() => _BmiPageState();
+  _BmiViewState createState() => _BmiViewState();
 }
 
-class _BmiPageState extends State<BmiPage> {
+class _BmiViewState extends State<BmiView> {
   final controller = BmiPageController();
   @override
   Widget build(BuildContext context) {

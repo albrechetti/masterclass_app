@@ -19,7 +19,7 @@ class CustomBottomBarItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => navigationController.setPageIndex(indexPage),
+      onTap: () => navigationController.setPageIndexOnTap(indexPage),
       child: SizedBox(
         height: 68,
         width: MediaQuery.of(context).size.width / 4,

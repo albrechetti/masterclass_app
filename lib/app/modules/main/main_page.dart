@@ -22,7 +22,7 @@ class MainPageState extends ModularState<MainPage, NavigationController> {
       body: SafeArea(
         child: PageView(
           controller: controller.pageController,
-          onPageChanged: (index) => controller.setPageIndex(index),
+          onPageChanged: (index) => controller.setPageIndexOnPageChanged(index),
           children: const [
             ActivitiesPage(),
             RepositoryPage(),
