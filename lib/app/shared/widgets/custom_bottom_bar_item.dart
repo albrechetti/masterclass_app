@@ -18,38 +18,41 @@ class CustomBottomBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 68,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              AnimatedContainer(
-                duration: const Duration(milliseconds: 500),
-                height: 32,
-                width: 64,
-                decoration: BoxDecoration(
-                  color: isSelected
-                      ? Theme.of(context).backgroundColor
-                      : Theme.of(context).scaffoldBackgroundColor,
-                  borderRadius: BorderRadius.circular(20),
+    return GestureDetector(
+      onTap: () => navigationController.setPageIndex(indexPage),
+      child: SizedBox(
+        height: 68,
+        width: MediaQuery.of(context).size.width / 4,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 500),
+                  height: 32,
+                  width: 64,
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? Theme.of(context).backgroundColor
+                        : Theme.of(context).scaffoldBackgroundColor,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
-              ),
-              IconButton(
-                splashRadius: 20,
-                splashColor: Theme.of(context).primaryColor,
-                icon: icon,
-                color: Theme.of(context).highlightColor,
-                iconSize: 24,
-                onPressed: () => navigationController.setPageIndex(indexPage),
-              ),
-            ],
-          ),
-          Text(title, style: Theme.of(context).textTheme.bodyText1)
-        ],
+                Icon(
+                  icon.icon,
+                  color: isSelected
+                      ? Theme.of(context).highlightColor
+                      : Theme.of(context).disabledColor,
+                  size: 24,
+                ),
+              ],
+            ),
+            Text(title, style: Theme.of(context).textTheme.bodyText1)
+          ],
+        ),
       ),
     );
   }
