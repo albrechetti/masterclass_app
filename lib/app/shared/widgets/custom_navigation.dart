@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:masterclass_app/app/shared/widgets/custom_bottom_app_bar.dart';
+import 'package:masterclass_app/app/shared/widgets/custom_bottom_bar.dart';
 import 'package:masterclass_app/app/utils/controllers/hide_bottom_bar_controller.dart';
 
 class CustomNavigation extends StatefulWidget {
@@ -17,14 +17,10 @@ class _CustomNavigationState extends State<CustomNavigation> {
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
       valueListenable: hiding.visible,
-      builder: (context, bool value, child) => AnimatedContainer(
-        duration: const Duration(milliseconds: 500),
-        height: value ? 100 : 0.0,
-        child: Wrap(
-          children: const [
-            CustomBottomBar(),
-          ],
-        ),
+      builder: (context, bool value, child) => Wrap(
+        children: const [
+          CustomBottomBar(),
+        ],
       ),
     );
   }

@@ -27,7 +27,8 @@ class CustomBottomBarItem extends StatelessWidget {
           Stack(
             alignment: Alignment.center,
             children: [
-              Container(
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 500),
                 height: 32,
                 width: 64,
                 decoration: BoxDecoration(

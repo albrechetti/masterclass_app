@@ -14,6 +14,7 @@ class CustomBottomBar extends StatefulWidget {
 
 class _CustomBottomBarState extends State<CustomBottomBar> {
   final navigationController = Modular.get<NavigationController>();
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
