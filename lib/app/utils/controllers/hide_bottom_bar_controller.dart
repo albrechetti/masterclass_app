@@ -1,30 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
-class HideBottomBar {
+class HideBottomBar extends ValueNotifier<bool> implements Disposable {
   final ScrollController scrollController = ScrollController();
+  //final ValueNotifier<bool> visible = ValueNotifier<bool>(false);
 
-  final ValueNotifier<bool> visible = ValueNotifier<bool>(true);
-
-  HideBottomBar() {
-    visible.value = true;
+  HideBottomBar() : super(true) {
+    //visible.value = true;
     scrollController.addListener(() {
       if (scrollController.position.userScrollDirection ==
           ScrollDirection.reverse) {
-        if (visible.value) {
-          visible.value = false;
+        if (value) {
+          value = false;
         }
       }
       if (scrollController.position.userScrollDirection ==
           ScrollDirection.forward) {
-        if (!visible.value) {
-          visible.value = true;
+        if (!value) {
+          value = true;
         }
       }
     });
   }
+  @override
   void dispose() {
+    super.dispose();
     scrollController.dispose();
-    visible.dispose();
+    dispose();
   }
 }

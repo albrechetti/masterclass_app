@@ -1,6 +1,5 @@
 import 'package:masterclass_app/app/modules/design_patterns/mvp/model/person_model.dart';
 import 'package:masterclass_app/app/modules/design_patterns/mvp/presenter/bmi_presenter_interface.dart';
-
 class BmiPresenter {
   final person = PersonModel();
   final IBmiPresenter contract;

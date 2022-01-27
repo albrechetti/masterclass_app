@@ -12,7 +12,6 @@ class NavigationController extends ValueNotifier<MyPages> {
 
   void setPageIndexOnTap(int index) {
     value = MyPages.values[index];
-
     pageController.jumpToPage(index);
   }
 

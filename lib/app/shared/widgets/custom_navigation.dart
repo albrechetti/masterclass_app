@@ -13,13 +13,19 @@ class CustomNavigation extends StatefulWidget {
 
 class _CustomNavigationState extends State<CustomNavigation> {
   final hiding = Modular.get<HideBottomBar>();
+
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-      valueListenable: hiding.visible,
-      builder: (context, bool value, child) => Wrap(
-        children: const [
-          CustomBottomBar(),
+    return AnimatedBuilder(
+      animation: hiding,
+      builder: (context, child) => Wrap(
+        children: [
+          AnimatedAlign(
+            alignment: Alignment.topCenter,
+            duration: const Duration(milliseconds: 500),
+            heightFactor: hiding.value ? 1 : 0,
+            child: const CustomBottomBar(),
+          ),
         ],
       ),
     );

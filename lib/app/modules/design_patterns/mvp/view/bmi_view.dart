@@ -19,7 +19,7 @@ class _BmiViewState extends State<BmiView> implements IBmiPresenter {
     return Scaffold(
       appBar: const CustomAppBar(
         hasLogo: false,
-        title: 'IMC - Controller ',
+        title: 'IMC - Presenter ',
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -43,7 +43,7 @@ class _BmiViewState extends State<BmiView> implements IBmiPresenter {
                     Positioned(
                       bottom: 0,
                       child: Text(
-                        'Estudo do design pattern \n Controller',
+                        'Estudo do design pattern \n Presenter',
                         style: Theme.of(context).textTheme.headline2!.copyWith(
                               fontWeight: FontWeight.bold,
                             ),

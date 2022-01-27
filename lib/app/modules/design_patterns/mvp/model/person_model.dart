@@ -1,5 +1,4 @@
 import 'dart:math';
-
 class PersonModel {
   double _weight = 0.0;
   double _height = 0.0;
